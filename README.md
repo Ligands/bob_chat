@@ -27,13 +27,15 @@ Bob is a lackadaisical teenager. In conversation, his responses are very limited
 
 2. Get project dependencies:
 
+`cd bob_chat`  
 `mix deps.get`
 
 ## Running
 
-1. Start the BobChat Server by running the following command in the project directory:
+1. Start the BobChat Server by running the startup script from the project directory relevant to your operating system:
 
-`iex -S mix run -e "{:ok, _} = Plug.Adapters.Cowboy.http BobChat, []"`
+- *Windows:* `start.bat`
+- *\*nix:* `start.sh`
 
 2. Navigate to http://localhost:4000/ and say something to Bob!
 
