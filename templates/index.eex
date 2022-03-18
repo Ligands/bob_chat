@@ -108,17 +108,16 @@
       padding: 8px 10px;
       display: inline-block;
     }
-    .msglabel {
-      border-right: solid 1px #cbc9c9;
-    }
     .msgcontent {
       padding-left: 12px !important;
+      border-left: solid 1px #cbc9c9;
     }
     .inmsg > .msgcontent {
       color: #0a0a0a;
     }
     .outmsg > .msgcontent {
       color: white;
+      display: flex;
     }
     .outmsg > .msglabel {
       float: left;
@@ -128,6 +127,13 @@
   <body>
     <div class="main-block">
       <h1>BobChat</h1>
+      <%= if response != "" do %>
+        <hr>
+        <div class="response">
+          <div class="outmsg"><span class="msglabel">You</span><span class="msgcontent"><%= question %><span></div>
+          <div class="inmsg"><span class="msglabel">Bob</span><span class="msgcontent"><%= response %></span></div>
+        </div>
+      <% end %>
       <form action="request">
         <hr>
         <label id="icon" for="q">...</label>
@@ -136,13 +142,6 @@
           <button type="submit" href="/">Ask Bob!</button>
         </div>
       </form>
-      <%= if response != "" do %>
-        <hr>
-        <div class="response">
-          <div class="outmsg"><span class="msglabel">You</span><span class="msgcontent"><%= question %><span></div>
-          <div class="inmsg"><span class="msglabel">Bob</span><span class="msgcontent"><%= response %></span></div>
-        </div>
-      <% end %>
     </div>
   </body>
 </html>
