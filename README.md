@@ -18,6 +18,7 @@ Bob is a lackadaisical teenager. In conversation, his responses are very limited
 
 1. Elixir (1.13+)
 2. Any web browser
+3. Port 4000 must not be in use
 
 ## Installation
 
