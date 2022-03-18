@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chat with Bob</title>
+  </head>
+  <body>
+    <h1>BobChat</h1>
+    <form action="request">
+      <input type="text" name="q" id="q" placeholder="Say something..." />
+      <button type="submit" href="/">Ask Bob!</button>
+    </form>
+    <%= if response != "" do %>
+      <div>
+        <p>Question: <%= question %></p>
+        <h2>Bob: <%= response %></h2>
+      </div>
+    <% end %>
+  </body>
+</html>
