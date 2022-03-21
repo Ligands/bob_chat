@@ -111,16 +111,24 @@
     .msgcontent {
       padding-left: 12px !important;
       border-left: solid 1px #cbc9c9;
+      display: flex !important;
     }
     .inmsg > .msgcontent {
       color: #0a0a0a;
     }
     .outmsg > .msgcontent {
       color: white;
-      display: flex;
     }
-    .outmsg > .msglabel {
+    .msglabel {
       float: left;
+    }
+    @media screen and (max-width: 479px) {
+      .main-block {
+        min-width: 0px;
+      }
+      .response > div {
+        width: 85%;
+      }
     }
     </style>
   </head>
